@@ -1,6 +1,7 @@
 #ifndef CLOPTIONS_H
 #define CLOPTIONS_H
 
+#include "../hash/ihash.h"
 #include "ioptions.h"
 
 class CLOptions : public IOptions
@@ -30,9 +31,14 @@ private:
     std::vector<std::filesystem::path> m_excludePaths;
 
     long m_levelScannig;
+
     std::size_t m_minFileSize;
+
     std::vector<Mask> m_masks;
+
     std::size_t m_blockSize;
+
+    std::shared_ptr<IHash> hash;
 };
 
 #endif // CLOPTIONS_H

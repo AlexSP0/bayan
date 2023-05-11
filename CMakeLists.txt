@@ -19,13 +19,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Boost COMPONENTS program_options unit_test_framework REQUIRED)
 
 add_subdirectory(options)
+add_subdirectory(hash)
 
 add_executable(${NAME_EXECUTABLE}
     bayantypes.h
     main.cpp
 )
 
-target_link_libraries(bayan options)
+target_link_libraries(bayan options hash)
 
 target_include_directories(${NAME_EXECUTABLE}
     PRIVATE "${CMAKE_BINARY_DIR}"
