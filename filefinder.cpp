@@ -24,7 +24,14 @@ void FileFinder::scan()
     }
 }
 
-void FileFinder::out() {}
+void FileFinder::out(std::shared_ptr<IHandler> handler)
+{
+    if (handler)
+    {
+        for (const auto &i : m_fileList)
+            handler->addFile(i.first, i.second);
+    }
+}
 
 bool FileFinder::isMatchMasks(const std::string &filename) const
 {

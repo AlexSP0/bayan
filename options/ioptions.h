@@ -2,6 +2,7 @@
 #define IOPTIONS_H
 
 #include <filesystem>
+#include <string>
 #include <vector>
 
 #include "../bayantypes.h"

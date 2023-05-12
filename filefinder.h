@@ -4,6 +4,7 @@
 #include <filesystem>
 #include <memory>
 
+#include "ihandler.h"
 #include <options/ioptions.h>
 
 class FileFinder
@@ -13,7 +14,7 @@ public:
 
     void scan();
 
-    void out();
+    void out(std::shared_ptr<IHandler> handler);
 
 private:
     bool isMatchMasks(const std::string &filename) const;

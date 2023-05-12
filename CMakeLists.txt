@@ -25,6 +25,9 @@ add_executable(${NAME_EXECUTABLE}
     bayantypes.h
     filefinder.h
     filefinder.cpp
+    ihandler.h
+    handler.h
+    handler.cpp
     main.cpp
 )
 
