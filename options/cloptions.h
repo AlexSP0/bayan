@@ -12,7 +12,7 @@ public:
 public:
     void printOpt() override;
 
-    std::string getHashOffBuffer(const char *) override;
+    std::string getHashOffBuffer(const char *inBuffer) override;
 
     size_t getBlockSize() override;
 
@@ -38,7 +38,7 @@ private:
 
     std::size_t m_blockSize;
 
-    std::shared_ptr<IHash> hash;
+    std::shared_ptr<IHash> m_hash;
 };
 
 #endif // CLOPTIONS_H

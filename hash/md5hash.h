@@ -8,7 +8,7 @@
 class MD5Hash : public IHash
 {
 public:
-    std::string hasAsString(const char *data, size_t size);
+    std::string hashAsString(const char *data, size_t size);
 };
 
 #endif

@@ -9,7 +9,7 @@ class IHash
 public:
     virtual ~IHash() = default;
 
-    virtual std::string hasAsString(const char *data, size_t size) = 0;
+    virtual std::string hashAsString(const char *data, size_t size) = 0;
 };
 
 #endif

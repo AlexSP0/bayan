@@ -13,7 +13,7 @@ public:
 
     virtual void printOpt() = 0;
 
-    virtual std::string getHashOffBuffer(const char *) = 0;
+    virtual std::string getHashOffBuffer(const char *inBuffer) = 0;
 
     virtual size_t getBlockSize() = 0;
 
