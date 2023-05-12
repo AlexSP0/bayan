@@ -2,10 +2,13 @@
 #define CLOPTIONS_H
 
 #include "../hash/ihash.h"
+#include "clparser.h"
 #include "ioptions.h"
 
 class CLOptions : public IOptions
 {
+    friend CLParser;
+
 public:
     CLOptions();
 
@@ -30,7 +33,7 @@ private:
     std::vector<std::filesystem::path> m_includePaths;
     std::vector<std::filesystem::path> m_excludePaths;
 
-    long m_levelScannig;
+    long m_levelScanning;
 
     std::size_t m_minFileSize;
 

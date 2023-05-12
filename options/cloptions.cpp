@@ -17,7 +17,7 @@ void CLOptions::printOpt()
 
     std::cout << m_masks.size() << std::endl;
 
-    std::cout << m_levelScannig << std::endl;
+    std::cout << m_levelScanning << std::endl;
 
     std::cout << getMinFileSize() << std::endl;
 
@@ -43,7 +43,7 @@ size_t CLOptions::getMinFileSize()
 
 long CLOptions::getLevelScanning()
 {
-    return m_levelScannig;
+    return m_levelScanning;
 }
 
 std::vector<std::filesystem::path> CLOptions::getIncludePath()
