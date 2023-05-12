@@ -23,6 +23,8 @@ add_subdirectory(hash)
 
 add_executable(${NAME_EXECUTABLE}
     bayantypes.h
+    filefinder.h
+    filefinder.cpp
     main.cpp
 )
 
