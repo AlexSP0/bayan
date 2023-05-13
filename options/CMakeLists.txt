@@ -14,3 +14,4 @@ set(SOURCES
 )
 
 add_library(options STATIC ${HEADERS} ${SOURCES})
+target_link_libraries(options PUBLIC ${Boost_LIBRARIES})
