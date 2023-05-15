@@ -29,9 +29,12 @@ void Handler::searchEqualFiles()
 
     for (auto nextIter = std::next(currentIter); nextIter != m_fileList.rend(); ++nextIter)
     {
+        auto a1 = currentIter->path;
+        auto a2 = nextIter->path;
+
         if (currentIter->fileSize == nextIter->fileSize)
         {
-            for (size_t i = 0; currentIter->fileSize / m_blockSize; i++)
+            for (size_t i = 0; currentIter->fileSize / m_blockSize >= i; ++i)
             {
                 if (nextBlockExits(currentIter) && readNextBlock(*currentIter, i) != readNextBlock(*nextIter, i))
                 {

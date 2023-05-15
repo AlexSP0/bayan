@@ -24,7 +24,7 @@ CLParser::CLParser()
             (
                 "excludes, e",
                 bpo::value<std::vector<path>>()
-                ->default_value(std::vector<path>(1, "./"), "./")
+                ->default_value(std::vector<path>(), "empty")
                 ->multitoken()
                 ->zero_tokens()
                 ->composing(),
@@ -49,7 +49,9 @@ CLParser::CLParser()
             (
                 "block-size,b",
                 bpo::value<long>()->default_value(512L),
-                "Block size for reading file.")("algorithm,a",
+                "Block size for reading file."
+            )
+            (   "algorithm,a",
                 bpo::value<std::string>()->default_value("crc32"),
                 "Hash algorithm: md5 or crc32."
             )

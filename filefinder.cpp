@@ -14,7 +14,7 @@ void FileFinder::scan()
 
         for (; curIter != endIter; curIter++)
         {
-            if (curIter.depth() < m_options->getLevelScanning() && !(isPathExcluded(curIter))
+            if (curIter.depth() < m_options->getLevelScanning() && !isPathExcluded(curIter)
                 && curIter->is_regular_file() && curIter->file_size() > m_options->getMinFileSize()
                 && isMatchMasks(curIter->path().filename().string()))
             {
